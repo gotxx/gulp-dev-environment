@@ -6,6 +6,7 @@
 *.exe
 *.o
 *.so
+*.
 
 # Packages #
 ############
@@ -39,3 +40,8 @@ Thumbs.db
 # Custom          #
 ###################
 node_modules
+
+# Project files   #
+###################
+*.sublime-project
+*.sublime-workspace
