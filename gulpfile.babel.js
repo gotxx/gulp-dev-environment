@@ -21,7 +21,6 @@ import runSequence from 'run-sequence';
 import uglify from 'gulp-uglify';
 import plumber from 'gulp-plumber';
 
-import jade from 'gulp-jade';
 import pug from 'gulp-pug';
 import data from 'gulp-data';
 import gPath from 'path';
@@ -130,25 +129,8 @@ gulp.task("copy:img", () => {
         .pipe(browserSync.reload({ stream: true })); // Reload browser
 });
 
-// gulp.task('jade:transform', () => {
-// 	let YOUR_LOCALS = {};
-
-// 	return gulp.src(path.jade.src)
-// 		.pipe(plumber({
-// 			errorHandler: errHandler
-// 		}))
-// 		.pipe(jade({
-// 			locals: YOUR_LOCALS,
-// 			pretty: true
-// 		}))
-// 		.pipe(plumber.stop())
-// 		.pipe(gulp.dest(path.jade.dist))
-// 		.pipe(browserSync.reload({ stream: true })); // Reload browser
-// });
-
 let getJsonData = (file) => {
 	delete require.cache[require.resolve(`${path.data.src}${gPath.basename(file.path)}.json`)];
-
 	// console.log(require(`${path.data.src}${gPath.basename(file.path)}.json`));
  	return require(`${path.data.src}${gPath.basename(file.path)}.json`);
 };
@@ -172,10 +154,6 @@ gulp.task('browser-sync', () => {
 	browserSync({ server: {
 		baseDir: path.html.dist
 	}});
-});
-
-gulp.task('build:jade', (cb) => {
-	runSequence('clean', ['sass', 'build:js', 'copy:img', 'jade:transform'], 'browser-sync', cb);
 });
 
 gulp.task('build:pug', (cb) => {
