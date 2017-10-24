@@ -130,26 +130,26 @@ gulp.task("copy:img", () => {
         .pipe(browserSync.reload({ stream: true })); // Reload browser
 });
 
-gulp.task('jade:transform', () => {
-	let YOUR_LOCALS = {};
+// gulp.task('jade:transform', () => {
+// 	let YOUR_LOCALS = {};
 
-	return gulp.src(path.jade.src)
-		.pipe(plumber({
-			errorHandler: errHandler
-		}))
-		.pipe(jade({
-			locals: YOUR_LOCALS,
-			pretty: true
-		}))
-		.pipe(plumber.stop())
-		.pipe(gulp.dest(path.jade.dist))
-		.pipe(browserSync.reload({ stream: true })); // Reload browser
-});
+// 	return gulp.src(path.jade.src)
+// 		.pipe(plumber({
+// 			errorHandler: errHandler
+// 		}))
+// 		.pipe(jade({
+// 			locals: YOUR_LOCALS,
+// 			pretty: true
+// 		}))
+// 		.pipe(plumber.stop())
+// 		.pipe(gulp.dest(path.jade.dist))
+// 		.pipe(browserSync.reload({ stream: true })); // Reload browser
+// });
 
 let getJsonData = (file) => {
 	delete require.cache[require.resolve(`${path.data.src}${gPath.basename(file.path)}.json`)];
 
-	console.log(require(`${path.data.src}${gPath.basename(file.path)}.json`));
+	// console.log(require(`${path.data.src}${gPath.basename(file.path)}.json`));
  	return require(`${path.data.src}${gPath.basename(file.path)}.json`);
 };
 
