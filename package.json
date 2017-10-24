@@ -1,7 +1,7 @@
 {
-  "name": "gulp-ts",
+  "name": "gulp-dev-environment",
   "version": "1.0.0",
-  "description": "Gulp with Babel, TypeScript, Sass, LiveReload",
+  "description": "Gulp with Babel, TypeScript, Pug, Sass, LiveReload",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,6 +14,10 @@
   ],
   "author": "klinek",
   "license": "ISC",
+  "repository": { 
+    "type": "git",
+    "url": "https://github.com/gotxx/gulp-dev-environment.git" 
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.0",
