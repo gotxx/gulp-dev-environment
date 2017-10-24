@@ -1,0 +1,5 @@
+{
+	"name": "Jon",
+	"city": "Wrocław",
+	"tech": ["js","css","html", "pug", "test"]
+}

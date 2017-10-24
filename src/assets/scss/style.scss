@@ -1,0 +1,45 @@
+// @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin,latin-ext);
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700&subset=latin-ext');
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&subset=latin,latin-ext);
+// @import url(https://fonts.googleapis.com/css?family=Rajdhani:400,600,700&subset=latin-ext);
+
+@import "partials/variables";
+@import "mixins/em";
+@import "mixins/border_box";
+@import "mixins/transition";
+@import "mixins/rotate";
+@import "mixins/grid_maker";
+@import "mixins/border_radius";
+
+body { margin: 0px; }
+#landing-page{
+	//lp box styles
+	position: relative;
+	width: $basic-lp-width; //1100px - variables.scss
+	margin: 0 auto; 
+	// overflow: hidden;
+	font-family: $font-basic, sans-serif;
+	font-size: $basic-font-size; //16px - variables.scss
+	font-weight: normal;
+	line-height: 1.4;
+	text-align: left;
+	color: $color-main-font;
+
+	// background-color: #030303;
+	// background-image: url('../images/lp-bg-top.jpg'), url('../images/lp-bg-bot.jpg');
+	// background-repeat: no-repeat, no-repeat;
+	// background-position: center top, center bottom;
+	// background-size: 100%, 100%;
+
+	//selective styles
+	@import "partials/basic";
+	@import "partials/header";
+	@import "partials/main";
+	@import "partials/footer";
+	@import "partials/product";
+	@import "partials/buttons";
+	@import "partials/media_queries";
+
+	@include grid(12, .5%);
+}

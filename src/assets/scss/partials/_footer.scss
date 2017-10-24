@@ -1,0 +1,45 @@
+.lp-footer {
+	// background: #F4F7FE;
+	font-family: "Open Sans", sans-serif;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+	a {
+		display: block;
+		color: $color-header-font;
+		text-decoration: none;
+		font-size: em(15px);
+		line-height: 1.1;
+		text-decoration: none;
+		padding: 20px;
+		margin: 0;
+		font-weight: 500;
+	}
+	span {
+		font-size: em(14px);
+		color: $color-header-font;
+		line-height: 1.1;
+	}
+	a.btn {
+		@include transition(all .3s ease);
+		&:hover {
+			@include transition(all .3s ease);
+			background-color: $color-5;
+			color: #fff;
+		}
+	}
+	.legal-pdf{
+		background:transparent url('../images/icons/icon-pdf.png') left center no-repeat;
+	}
+	.legal-date{
+		background:transparent url('../images/icons/icon-date-white.png') left center no-repeat;
+		padding-left: 50px;
+	}
+	.legal-form{
+		background:transparent url('../images/icons/icon-form-v2-white.png') left center no-repeat;
+	}
+	.legal-reg{
+		// background:transparent url('../images/icons/icon-reg-gray.png') left center no-repeat;
+		// padding-left: 30px;
+	}
+}

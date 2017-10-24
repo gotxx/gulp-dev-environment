@@ -1,0 +1,133 @@
+.lp-btn {
+	@include transition(all .3s ease);
+	@include box-sizing(border-box);
+	display: inline-block;
+	// width: 218px;
+	padding: 13px 48px;
+	margin: 30px auto;
+	font-family: $font-n24, sans-serif;
+	font-size: 	em(14px);
+	line-height: 1;
+	font-weight: 700;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	&:hover, &:active {
+		@include transition(all .3s ease);
+	}
+	&.btn-cart {
+		position: relative;
+		&.loading {
+			&:after {
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 5;
+				display: block;
+				content: '';
+				background-color: rgba(0,0,0, 0.1);
+				background-image: url('../images/ajax-loader-small.gif');
+				background-position: 15px center;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+	&__wrapper {
+		padding: 1% 3%;
+	}
+	&_block {
+		display: block;
+		padding: 10px 16px;
+		margin: 2% 0;
+	}
+	&_check {
+		color: #fff;
+		background-color: transparent;
+		border: 2px solid #e3001b;
+		color: #e3001b;
+		&:hover, &:active {
+			color: #fff;
+			background-color: #e3001b;
+		}
+	}
+	&_yellow {
+		color: #fff;
+		background-color: $color-y;
+		border: 1px solid $color-y;
+		&:hover, &:active {
+			color: #000;
+			background-color: transparent;
+		}
+	}
+	&_violet {
+		color: #fff;
+		background-color: $color-v;
+		border: 2px solid $color-v;
+		&:hover, &:active {
+			color: $color-v;
+			background-color: transparent;
+		}
+	}
+	&_white {
+		color: $color-header-font;
+		background-color: #fff;
+		border: 1px solid #fff;
+		&:hover, &:active {
+			color: #fff;
+			background-color: transparent;
+			// border-color: #fff;
+		}
+	}
+	&_red {
+		font-size: em(14px);
+		color: #fff;
+		background-color: $color-r;
+		border: 2px solid $color-r;
+		&:hover, &:active {
+			color: $color-r;
+			background-color: #fff;
+		}
+	}
+	&_orange {
+		font-size: em(12px);
+		color: #fff;
+		background-color: $color-o;
+		border: 4px solid $color-o;
+		&:hover, &:active {
+			color: $color-o;
+			background-color: #fff;
+		}
+	}
+	&_green {
+		font-size: em(18px);
+		color: #fff;
+		background-color: $color-g;
+		border: 2px solid $color-g;
+		&:hover, &:active {
+			color: $color-g;
+			background-color: transparent;
+		}
+	}
+	&_small {
+		padding: 10px 15px;
+		font-size: 0.813em;
+	}
+	&_reg {
+		color: #fff;
+		// padding-left: 71px;
+		font-size: 18px;
+		background-image: url(../images/icons/lp-reg.png);
+		background-position: 0 center;
+		background-repeat:  no-repeat;
+		&:hover, &:active {
+			color: #ffb4b8;
+		}
+	}
+	&_endtime {
+		background-image: url(../images/icons/lp-promo-finish.png);
+		background-position: 0 center;
+		background-repeat:  no-repeat;
+	}
+}

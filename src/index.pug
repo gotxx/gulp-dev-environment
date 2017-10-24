@@ -1,0 +1,75 @@
+doctype html
+html
+  head
+    title my jade template
+    link(rel="stylesheet" type="text/css" href="assets/css/style.min.css")
+    //if lt IE 7
+    link(rel="stylesheet" type="text/css" href="all-ie-only.css")
+
+  body
+    div#landing-page
+      .lp-test(style={color: '#000'})
+        .lp-name #{name}
+        .lp-city #{city}
+        ul
+          each tec in tech
+            li= tec
+              
+      .lp-header
+        .lp-banner
+          .lp-banner__title.lp-banner__title_lvl1 Męska rzecz
+          .lp-banner__title.lp-banner__title_lvl2 Wybierz dla niego coś specjalnego
+          .lp-banner__title.lp-banner__title_lvl3 Użyj kodu CHLOPAK, aby obniżyć cenę wybranego produktu.
+        .lp-info.
+          prezenty na dzień chłopaka<br> <strong>zobacz teraz</strong>
+      .lp-main
+        .lp-nav
+          .lp-nav__elem.lp-nav__elem_1.move-up
+            .lp-nav__img
+              img(src="assets/images/icon-1.png" alt="słuchawki")
+            .lp-nav__text
+              span słuchawki
+            a(href="/tag/product/list/tagId/1204" rel="nofollow").lp-btn.lp-btn_white sprawdź
+            //- .lp-nav__elem-hover
+            //-   .lp-nav__img
+            //-     img(src="assets/images/icon-1_h.png" alt="słuchawki")
+            //-   .lp-nav__text
+            //-     span słuchawki
+            //-   a(href="/tag/product/list/tagId/1204" rel="nofollow").lp-btn.lp-btn_white sprawdź
+          .lp-nav__elem.lp-nav__elem_2.move-up
+            .lp-nav__img
+              img(src="assets/images/icon-2.png" alt="słuchawki")
+            .lp-nav__text
+              span akcesoria<br>samochodowe
+            a(href="/tag/product/list/tagId/1200" rel="nofollow").lp-btn.lp-btn_white sprawdź
+          .lp-nav__elem.lp-nav__elem_3.move-up
+            .lp-nav__elem-inset
+              .lp-nav__img
+                img(src="assets/images/icon-3.png" alt="słuchawki")
+              .lp-nav__text
+                span dyski<br>zewnętrzne
+              a(href="/tag/product/list/tagId/1209" rel="nofollow").lp-btn.lp-btn_white sprawdź
+          .lp-nav__elem.lp-nav__elem_4.move-up
+            .lp-nav__elem-inset
+              .lp-nav__img
+                img(src="assets/images/icon-4.png" alt="słuchawki")
+              .lp-nav__text
+                span Pielęgnacja
+              a(href="/tag/product/list/tagId/1203" rel="nofollow").lp-btn.lp-btn_white sprawdź
+          .lp-nav__elem.lp-nav__elem_5.move-up
+            .lp-nav__elem-inset
+              .lp-nav__img
+                img(src="assets/images/icon-5.png" alt="słuchawki")
+              .lp-nav__text
+                span kamery<br>sportowe
+              a(href="/tag/product/list/tagId/1206" rel="nofollow").lp-btn.lp-btn_white sprawdź
+          .lp-nav__elem.lp-nav__elem_6.move-up
+            .lp-nav__img
+              img(src="assets/images/icon-6.png" alt="słuchawki")
+            .lp-nav__text
+              span Smartfony
+            a(href="/tag/product/list/tagId/1205" rel="nofollow").lp-btn.lp-btn_white sprawdź
+      .lp-footer
+        a(href="regulamin.pdf" rel="nofollow").btn Regulamin
+    //- script(src="assets/js/app-bundle.min.js")
+

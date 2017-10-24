@@ -1,0 +1,77 @@
+$lp-product-height: 262px;
+.lp-product {
+	@extend %inblock;
+	position: relative;
+	width: 100%;
+	// height: $lp-product-height;
+	padding: 120px 5px 10px;
+	font-family: $font-secondary;
+	font-size: $basic-font-size;
+	text-align: center;
+	// background-color: rgba(#fff, 1);
+
+	[class*="col-"] {}
+	&__name {
+		position: relative;
+		font-size: em(24px);
+		font-weight: 400;
+		line-height: 1.1;
+		margin: 0 0 30px 0;
+		color: #fff;
+	}
+	&__image {
+		width: 100%;
+		line-height: 370px;
+		height: 370px;
+		text-align: center;
+		a {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 -10%;
+			img {
+
+			}
+		}
+	}
+	&__text {
+		margin-bottom: 30px;
+		font-size: em(18px);
+		line-height: 1.5;
+	}
+	&__features {
+		display: inline-block;
+		text-align: left;
+		margin: 5px;
+		padding: 0;
+		overflow: hidden;
+		font-size: $basic-font-size;
+		li {
+			position: relative;
+			padding: 0 0 0 30px;
+			font-family: $font-secondary, sans-serif;
+			font-size: em(18px);
+			background: url('../images/icon-check.png') left 9px no-repeat;
+			line-height: 1.5;
+			list-style: none;
+			font-weight: 400;
+			margin: 0;
+			text-align: left;
+			color: #fff;
+		}
+	}
+	&__price{
+		&_special {
+			@include border-radius(100%);
+			display: block;
+			margin: 35px auto;
+			width: 100px;
+			height: 100px;
+			font-family: "Roboto Condensed", sans-serif;
+			font-size: 36px;
+			font-weight: 700;
+			line-height: 100px;
+			color: #fff;
+			background-color: #e72d30;
+		}
+	}
+}
